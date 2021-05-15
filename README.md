@@ -1,7 +1,12 @@
 # ConstructionSite
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
-
+Its a simple web-page that allows user to:
+ - add material details required in their construction contract.
+ - edit an existing material in their list
+ - delete an existing material in their list
+ - and, view the materials in their list.
+ 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
