@@ -1,0 +1,28 @@
+
+body{
+  background-image: url("src/assets/images/bg-img.png");
+  position: relative;
+}
+
+.btn-align {
+  margin: 0;
+  display: block;
+  position: fixed;
+  bottom: 70%;
+  right: 50%
+}
+.btn{
+  border-color: black;
+  color: brown;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 16px;
+  padding: 12px;
+}
+.heading {
+  display: block;
+  position: fixed;
+  top: 15%;
+  left: 43%;
+  color: saddlebrown;
+}

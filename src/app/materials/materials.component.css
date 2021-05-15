@@ -1,0 +1,51 @@
+
+.container {
+  padding: 100px;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.body{
+  width: 1000px;
+  height: 500px;
+  padding: 50px;
+  border: 1px solid black;
+  background: black;
+}
+
+.message{
+  position: center;
+  padding: 20px;
+  font-size: small;
+  font-style: italic;
+  color: wheat;
+  text-align: center;
+  border-radius: 8px;
+}
+.element {
+  width: 100%;
+  margin: 0 0;
+  color: saddlebrown;
+  font-weight: bold ;
+  font-family: "serif";
+  padding: 2px;
+  text-align: center;
+  background: black;
+}
+
+.view{
+  width: 200px;
+  height: 300px;
+  border: 1px solid black;
+  padding: 50px;
+  margin: 20px;
+  float: left;
+  background: #181818;
+}
+
+.element-div{
+  padding: 2px;
+}
+
+
+

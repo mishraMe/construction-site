@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "construction-site"
+    }
+  },
+  "defaultProject": "construction-site",
+  "cli": {
+    "analytics": false
+  }
 }

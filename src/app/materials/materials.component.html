@@ -1,0 +1,30 @@
+<div class="container">
+  <div>
+    <div id="crud-buttons">
+      <button (click)="addElement()">New</button>
+      <button class="bi bi-trash">DELETE</button>
+    </div>
+    <div class="body">
+      <div id="view-materials" class="view">
+        <div [hidden]="elementsPresent()" class="message">
+          {{noElementsMessage}}
+        </div>
+        <div *ngFor="let element of currentElements">
+          <div>
+            <span class="bi bi-pencil" (click)="editElement(element)">
+            </span>
+            <span class="bi bi-trash" (click)="deleteElement(element.id)">
+            </span>
+            <div class="element">{{element.name}}</div>
+            <div class="element">
+              {{element.quantity}} m<sup>3</sup>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div [hidden]="!showConfigWindow">
+        <app-material-config-window (newElementsEmitter)=getCurrentElements($event)></app-material-config-window>
+      </div>
+    </div>
+  </div>
+</div>

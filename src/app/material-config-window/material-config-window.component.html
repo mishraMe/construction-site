@@ -1,0 +1,54 @@
+<div id="material-config-window" class="edit">
+  <div>
+    <div id="material-name">
+      <div class="titles">
+        <label>Material</label>
+      </div>
+      <div>
+        <input class="input" type="text" [(ngModel)]="materialName">
+      </div>
+    </div>
+    <div id="material-color">
+      <div class="titles">
+        <label>Color</label>
+      </div>
+      <div>
+        <input class="color" type="color" [(ngModel)]="materialColor">
+      </div>
+    </div>
+  </div>
+  <div>
+    <div id="material-volume">
+      <div class="titles">
+        <label>Volume(m)<sup>3</sup></label>
+      </div>
+      <div>
+        <input class="input" type="number" [(ngModel)]="materialQuant"
+               min="1" max="10000" step="100" value="1">
+      </div>
+    </div>
+    <div id="material-cost">
+      <div class="titles">
+        <label>Cost (USD per m)<sup>3</sup></label>
+      </div>
+      <div>
+        <input class="input" type="number" [(ngModel)]="materialCost"
+               min="0.10" step="0.10" value="0.00">
+      </div>
+    </div>
+  </div>
+  <div>
+    <div id="material-delivery-date">
+      <div class="titles">
+        <label>Delivery Date</label>
+      </div>
+      <div>
+        <input class="input" type="date" [(ngModel)]="materialDelivery">
+      </div>
+    </div>
+  </div>
+  <div>
+    <button id="addItem" [hidden]="action !== 'new'" (click)="addToList()">ADD</button>
+    <button id="editItem" [hidden]="action !== 'edit'" (click)="updateElement()">UPDATE</button>
+  </div>
+</div>
