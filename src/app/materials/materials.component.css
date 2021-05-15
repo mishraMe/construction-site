@@ -43,6 +43,12 @@
   background: #181818;
 }
 
+.titles{
+  color: gray;
+  font-size: large;
+  padding: 5px;
+}
+
 .element-div{
   padding: 2px;
 }

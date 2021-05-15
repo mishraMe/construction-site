@@ -25,6 +25,11 @@
       <div [hidden]="!showConfigWindow">
         <app-material-config-window (newElementsEmitter)=getCurrentElements($event)></app-material-config-window>
       </div>
+      <div id="total-cost" style="display: block">
+        <div class="titles">
+          <label>TotalCost: {{this.totalCost}}</label>
+        </div>
+      </div>
     </div>
   </div>
 </div>

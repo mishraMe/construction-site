@@ -14,6 +14,7 @@ export class MaterialsComponent implements OnInit {
   noElementsMessage = 'no materials to show';
   showConfigWindow = false;
   currentElements: Material[] = [];
+  totalCost: number = 0.0;
   @ViewChild(MaterialConfigWindowComponent) configWindow: MaterialConfigWindowComponent;
 
   constructor(private router: Router, private materialService : MaterialService) {
@@ -24,6 +25,7 @@ export class MaterialsComponent implements OnInit {
   ngOnInit(): void {
     this.materialService.getMaterials().subscribe(data => {
       this.currentElements = data;
+      this.getTotalCost();
     });
   }
 
@@ -49,5 +51,13 @@ export class MaterialsComponent implements OnInit {
   getCurrentElements(value){
    this.currentElements = value.data;
    this.showConfigWindow = value.showConfig;
+   this.getTotalCost();
   }
+
+  getTotalCost() : void{
+    this.totalCost = this.currentElements.map(x => x.cost * x.quantity).reduce((a, b) => {
+      return a + b;
+    });
+  }
+
 }
