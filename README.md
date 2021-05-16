@@ -36,6 +36,6 @@ Challenges:
 choosing right colors.
 - Understanding what is router-outlet and how child components works.
 
-Time Spent: 8hrs
+Time Spent: 9hrs.
 
 
