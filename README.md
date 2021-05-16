@@ -32,7 +32,8 @@ Citations &Credits:
 
 Assumptions: 
 - As I was using the in-memory-web-api, I needed a way to provide a primary key, so I have added "id" as per the tutorials found on the web.
-- I assume all the input given in the form to create material will be correct type of input. 
+- I assume all the input given in the form to create material will be correct type of input.
+- The components are not responsive, the list can overflow in the view section.
 
 
 Challenges:
