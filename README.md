@@ -20,6 +20,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
+
 Citations &Credits:
 - https://angular.io/start
 - https://www.w3schools.com/css/
@@ -27,6 +28,7 @@ Citations &Credits:
 - https://blog.bitsrc.io/mock-apis-different-techniques-for-react-and-angular-156284b757f4
 - https://medium.com/angular-in-depth/faking-a-back-end-server-in-angular-960ff33275ba
 - https://www.npmjs.com/package/angular-in-memory-web-api
+- https://stackoverflow.com/questions/48832432/rounded-input-type-color
 
 Assumptions: 
 - As I was using the in-memory-web-api, I needed a way to provide a primary key, so I have added "id" as per the tutorials found on the web.

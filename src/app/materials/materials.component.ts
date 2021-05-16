@@ -55,6 +55,10 @@ export class MaterialsComponent implements OnInit {
   }
 
   getTotalCost() : void{
+    if(this.currentElements.length === 0){
+      this.totalCost = 0;
+      return;
+    }
     this.totalCost = this.currentElements.map(x => x.cost * x.quantity).reduce((a, b) => {
       return a + b;
     });
