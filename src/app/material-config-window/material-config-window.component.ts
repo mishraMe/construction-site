@@ -69,6 +69,14 @@ export class MaterialConfigWindowComponent implements OnInit {
       cost: this.materialCost, color: this.materialColor, deliveryDate: this.materialDelivery};
   }
 
+  //this method can be improved, currently as getAllCurrentMaterials makes a service call,
+  //we should ideally separate the task of gathering current materials and emitting the message to parent.
+
+  cancelConfig(): void{
+    this.getAllCurrentMaterials();
+    this.refreshWindow();
+  }
+
   refreshWindow() : void{
     this.materialName = '';
     this.materialDelivery = '';

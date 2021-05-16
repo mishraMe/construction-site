@@ -16,12 +16,35 @@
 
 .input{
   border-radius: 8px;
-  width: 50%;
   padding: 10px 10px;
   margin: 8px 0;
   background: gray;
   border: none;
   outline: none;
+  cursor: pointer;
+}
+.td{
+  width: 50%;
+}
+.td-left{
+  padding-right: 20px;
+}
+
+.td-right{
+  padding-left: 150px;
+}
+
+.submit-btn-div{
+  padding: 20px;
+}
+.submit-btn{
+  color: whitesmoke;
+  font-weight: bold;
+  font-family: sans-serif;
+  background: cadetblue;
+  border-radius: 8px;
+  width: 90px;
+  height: 35px;
 }
 
 .left-child{
@@ -30,10 +53,15 @@
 .right-child{
   float: right;
 }
-.color{
-  color: #1111;
+.color-div{
   border-radius: 50%;
-  background: gray;
-  border: none;
-  outline: none;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+}
+.color{
+  border: 0;
+  padding: 0;
+  width: 200%;
+  height: 200%;
 }

@@ -1,54 +1,58 @@
-<div id="material-config-window" class="edit">
-  <div>
-    <div id="material-name">
+<ng-form id="material-config-window" class="edit">
+  <tr>
+    <td id="material-name" class="td td-left">
       <div class="titles">
         <label>Material</label>
       </div>
       <div>
-        <input class="input" type="text" [(ngModel)]="materialName">
+        <input class="input" type="text" name="materialName" [(ngModel)]="materialName">
       </div>
-    </div>
-    <div id="material-color">
+    </td>
+    <td id="material-color" class="td td-right">
       <div class="titles">
         <label>Color</label>
       </div>
-      <div>
-        <input class="color" type="color" [(ngModel)]="materialColor">
+      <div  class="color-div">
+        <input type="color" class="color" name="materialColor" [(ngModel)]="materialColor">
       </div>
-    </div>
-  </div>
-  <div>
-    <div id="material-volume">
+    </td>
+  </tr>
+  <tr>
+    <td id="material-volume" class="td td-left">
       <div class="titles">
         <label>Volume(m)<sup>3</sup></label>
       </div>
       <div>
-        <input class="input" type="number" [(ngModel)]="materialQuant"
+        <input class="input" type="number" name="materialQuant" [(ngModel)]="materialQuant"
                min="1" max="10000" step="100" value="1">
       </div>
-    </div>
-    <div id="material-cost">
+    </td>
+    <td id="material-cost" class="td-right">
       <div class="titles">
         <label>Cost (USD per m)<sup>3</sup></label>
       </div>
       <div>
-        <input class="input" type="number" [(ngModel)]="materialCost"
-               min="0.10" step="0.10" value="0.00">
+        <input class="input" type="number" name="materialCost" [(ngModel)]="materialCost"
+               min="0.10" step="0.10" value="0.0">
       </div>
-    </div>
-  </div>
-  <div>
-    <div id="material-delivery-date">
+    </td>
+  </tr>
+  <tr>
+    <td id="material-delivery-date" class="td td-left">
       <div class="titles">
         <label>Delivery Date</label>
       </div>
       <div>
-        <input class="input" type="date" [(ngModel)]="materialDelivery">
+        <input class="input" type="date" name="materialDelivery" [(ngModel)]="materialDelivery">
       </div>
-    </div>
+    </td>
+  </tr>
+  <!-- as new and edit are action options they are mutually exclusive, cancle will appear with both the options deserves its own div-->
+  <div class="submit-btn-div" style="float: left">
+    <button id="addItem" class="submit-btn" [hidden]="action !== 'new'" (click)="addToList()">ADD</button>
+    <button id="editItem" class="submit-btn" [hidden]="action !== 'edit'" (click)="updateElement()">UPDATE</button>
   </div>
-  <div>
-    <button id="addItem" [hidden]="action !== 'new'" (click)="addToList()">ADD</button>
-    <button id="editItem" [hidden]="action !== 'edit'" (click)="updateElement()">UPDATE</button>
+  <div class="submit-btn-div" style="float: right">
+    <button id="cancle" class="submit-btn"  (click)="cancelConfig()">CANCEL</button>
   </div>
-</div>
+</ng-form>
